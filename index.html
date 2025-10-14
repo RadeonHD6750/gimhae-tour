@@ -1,9 +1,313 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>김해관광포털</title>
+    <title>김해에반해 관광포털</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/main-banner.css" />
+    <link rel="stylesheet" href="css/section.css" />
+    <link rel="stylesheet" href="css/footer.css" />
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <div class="header-top">
+        <div class="logo-area">
+          <img src="images/logo.png" alt="김해에반해 로고" />
+          <span class="portal-text">관광포털</span>
+        </div>
+
+        <div class="search-area">
+          <input type="text" placeholder="통합검색" />
+          <select class="search-select">
+            <option>전체</option>
+            <option>여행지</option>
+            <option>음식</option>
+          </select>
+          <button class="search-btn">🔍</button>
+        </div>
+
+        <div class="extra-links">
+          <a href="#" class="extra-btn">여행자등록</a>
+          <a href="#"
+            ><img src="images/naver.png" alt="네이버" class="sns-icon"
+          /></a>
+          <a href="#"
+            ><img src="images/insta.png" alt="인스타그램" class="sns-icon"
+          /></a>
+          <a href="#"
+            ><img src="images/youtube.png" alt="유튜브" class="sns-icon"
+          /></a>
+          <a href="#" class="festival-link">🎉 장영실축제 참가!</a>
+        </div>
+      </div>
+
+      <div class="header-bottom">
+        <nav class="nav">
+          <ul class="main-menu">
+            <li><a href="#">김해에반해</a></li>
+            <li><a href="#">요즘김해</a></li>
+            <li><a href="#">추천여행</a></li>
+            <li><a href="#">여행지</a></li>
+            <li><a href="#">음식·숙박·쇼핑</a></li>
+            <li><a href="#">여행정보</a></li>
+            <li><button class="menu-toggle">☰</button></li>
+          </ul>
+        </nav>
+        <div class="sub-links">
+          <a href="#">관광지도</a>
+          <a href="#">주변대중교통</a>
+          <a href="#">정보센터</a>
+          <a href="#">사이트맵</a>
+          <a href="#" class="smart-tour">스마트관광</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- 메인 비주얼 (자동슬라이드 케러젤) -->
+      <section class="main-visual">
+        <div class="visual-bg">
+          <img src="images/main-banner.jpg" alt="김해천문대 야경" />
+          <div class="overlay"></div>
+        </div>
+
+        <div class="main-content-wrap">
+          <h1 class="main-title">
+            <span class="logo-on-visual"
+              ><img src="images/logo-on-visual.png" alt="김해에반해"
+            /></span>
+            별 볼일 있는 놀이터 김해<br />
+            여행 가볼까?
+          </h1>
+
+          <div class="course-carousel-area">
+            <span class="course-title">가야왕도 테마여행 코스</span>
+            <div class="course-cards-wrapper">
+              <div class="course-card active">
+                <img src="images/course1.jpg" alt="코스 1 이미지" />
+                <p>수로왕릉</p>
+              </div>
+              <div class="course-card">
+                <img src="images/course2.jpg" alt="코스 2 이미지" />
+                <p>김해수로왕릉</p>
+              </div>
+              <div class="course-card">
+                <img src="images/course3.jpg" alt="코스 3 이미지" />
+                <p>가야테마파크</p>
+              </div>
+              <div class="course-card">
+                <img src="images/course4.jpg" alt="코스 4 이미지" />
+                <p>클레이아크</p>
+              </div>
+              <div class="course-card">
+                <img src="images/course5.jpg" alt="코스 5 이미지" />
+                <p>연지공원</p>
+              </div>
+            </div>
+            <div class="carousel-controls">
+              <span class="play-pause">◼︎</span>
+              <span class="prev-arrow">〈</span>
+              <span class="next-arrow">〉</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="taste-gimhae">
+        <h2 class="section-title">김해의 '맛'에 빠지다!</h2>
+        <div class="scroll-container">
+          <button class="arrow prev-arrow">〈</button>
+          <div class="taste-cards-wrapper">
+            <div class="taste-card">
+              <img src="images/food1.jpg" alt="장유대청계곡 음식촌" />
+              <div class="info">
+                <p class="name">장유대청계곡 음식촌</p>
+                <p class="desc">
+                  여름철 휴양지로 유명한 곳으로 맑은 계곡물에서 즐기는 별미!
+                </p>
+                <p class="location">경상남도 김해시 장유1동</p>
+              </div>
+            </div>
+            <div class="taste-card">
+              <img src="images/food2.jpg" alt="명동갯장어회 음식촌" />
+              <div class="info">
+                <p class="name">명동갯장어회 음식촌</p>
+                <p class="desc">
+                  부산 신항 인근 명동에 위치한 갯장어회로 유명한 곳이며 ...
+                </p>
+                <p class="location">경상남도 김해시 장유1동</p>
+              </div>
+            </div>
+            <div class="taste-card">
+              <img src="images/food3.jpg" alt="동상시장칼국수/수제비" />
+              <div class="info">
+                <p class="name">동상시장칼국수/수제비</p>
+                <p class="desc">
+                  칼국수 맛집! 김해 동상시장 안에 위치하여 저렴하고 ...
+                </p>
+                <p class="location">경상남도 김해시 동상시장</p>
+              </div>
+            </div>
+            <div class="taste-card">
+              <img src="images/food4.jpg" alt="서상시장 상국수" />
+              <div class="info">
+                <p class="name">서상시장 상국수</p>
+                <p class="desc">
+                  50년 전통의 김해, 서상시장에서 5일마다 열리는 ...
+                </p>
+                <p class="location">경상남도 김해시 서상시장</p>
+              </div>
+            </div>
+          </div>
+          <button class="arrow next-arrow">〉</button>
+        </div>
+      </section>
+
+      <section class="healing-spots">
+        <h2 class="section-title">힐링 되는 색다른 여행지</h2>
+        <div class="spot-cards">
+          <div class="spot-card">
+            <div class="spot-image-container">
+              <img src="images/healing1.jpg" alt="생림오토캠핑장" />
+              <button class="plus-btn">+</button>
+            </div>
+            <p class="name">생림오토캠핑장</p>
+            <p class="desc">
+              낙동강변에 위치한 자연과 함께 힐링할 수 있는 캠핑장
+            </p>
+          </div>
+          <div class="spot-card">
+            <div class="spot-image-container">
+              <img src="images/healing2.jpg" alt="클레이아크 김해미술관" />
+              <button class="plus-btn">+</button>
+            </div>
+            <p class="name">클레이아크 김해미술관</p>
+            <p class="desc">건축도자와 미술을 융합한 전문 미술관</p>
+          </div>
+          <div class="spot-card">
+            <div class="spot-image-container">
+              <img src="images/healing3.jpg" alt="화포천습지생태공원" />
+              <button class="plus-btn">+</button>
+            </div>
+            <p class="name">화포천습지생태공원</p>
+            <p class="desc">김해의 대표적인 생태공원으로 철새도래지</p>
+          </div>
+        </div>
+        <div class="pagination">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </section>
+
+      <section class="info-utility">
+        <div class="content-wrapper">
+          <div class="notice-area">
+            <h2 class="section-title-small">공지사항</h2>
+            <button class="more-btn">+</button>
+            <ul class="notice-list">
+              <li>
+                경남에서 한 달 여행하기 '아름다운 김해' 참가자 모집 (D-day 8)
+              </li>
+              <li>경남에서 한 달 여행하기 '아름다운 김해' 2차 참가자 모집</li>
+              <li>
+                경남에서 한 달 여행하기 '김해에 반해' 참가자 모집 공고(2차)
+              </li>
+              <li>2024년 김해DMZ 관광콘텐츠에 역량강화된 교육 신청 안내</li>
+              <li>
+                경남에서 한 달 여행하기 '김해에 반해' 참가자 모집 공고(2차)
+              </li>
+            </ul>
+          </div>
+
+          <div class="utility-area">
+            <a href="#" class="utility-item">
+              <div class="icon-wrap">
+                <img src="images/info-icon.png" alt="종합관광안내소 아이콘" />
+              </div>
+              <p>종합관광안내소</p>
+            </a>
+            <a href="#" class="utility-item">
+              <div class="icon-wrap">
+                <img src="images/phone-icon.png" alt="전화 아이콘" />
+              </div>
+              <p>1330관광안내전화</p>
+            </a>
+            <a href="#" class="utility-item">
+              <div class="icon-wrap">
+                <img src="images/map-icon.png" alt="지도 아이콘" />
+              </div>
+              <p>관광안내책자</p>
+            </a>
+            <a href="#" class="utility-item">
+              <div class="icon-wrap">
+                <img src="images/qna-icon.png" alt="Q&A 아이콘" />
+              </div>
+              <p>Q&A</p>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+      <div class="footer-top-menu">
+        <a href="#">정책정보 모음</a>
+        <a href="#">삶의 질을 추구하는 국제슬로시티 김해</a>
+        <a href="#">유니세프 아동친화도시</a>
+        <a href="#">근로복지공단</a>
+        <a href="#">정부24</a>
+        <a href="#">위기상황 생활안전정보</a>
+        <a href="#">경매정보</a>
+      </div>
+
+      <div class="footer-dropdowns">
+        <select>
+          <option>부서/사업소</option>
+        </select>
+        <select>
+          <option>읍면동</option>
+        </select>
+        <select>
+          <option>유관기관</option>
+        </select>
+        <select>
+          <option>도/시/자치단체</option>
+        </select>
+        <select>
+          <option>김해시청</option>
+        </select>
+      </div>
+
+      <div class="footer-info-area">
+        <div class="links">
+          <a href="#">개인정보처리방침</a>
+          <a href="#">저작권정책</a>
+          <a href="#">누리집이용안내</a>
+          <a href="#">찾아오시는길</a>
+          <a href="#">주차장안내</a>
+          <a href="#">직원연락처(팩스포함)</a>
+        </div>
+
+        <p class="address">
+          50924 경상남도 김해시 김해대로 2491(부원동) 김해시청 관광진흥과<br />
+          문의전화 : 1577-9400(유료), 055-330-3114(유료)
+        </p>
+        <p class="working-hours">
+          ※ 민원콜센터 운영시간: 평일(09:00~18:00), 토/일요일, 공휴일 및
+          근무시간 외에는 상담되지 않습니다.
+        </p>
+        <p class="copyright">Copyright(C) Gimhae City. All Rights Reserved.</p>
+
+        <div class="certifications">
+          <img src="images/certification1.png" alt="인증마크1" />
+          <img src="images/certification2.png" alt="인증마크2" />
+        </div>
+      </div>
+      <button class="top-btn">TOP</button>
+    </footer>
+  </body>
 </html>

@@ -1,0 +1,143 @@
+/* 기본 스타일 */
+body {
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  color: #222;
+}
+
+.header {
+  border-bottom: 1px solid #ddd;
+}
+
+/* 1단: Top Bar */
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  background: #fff;
+}
+
+/* 로고 영역 */
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #0a6eff;
+}
+
+.logo-area img {
+  height: 32px; /* 로고 이미지 크기 */
+}
+
+.logo-area .portal-text {
+  font-size: 14px;
+  color: #333;
+}
+
+/* 검색 영역 */
+.search-area {
+  display: flex;
+  align-items: center;
+  border: 2px solid #0a6eff; /* 파란색 테두리 */
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.search-area input {
+  border: none;
+  padding: 6px 8px;
+  outline: none;
+  width: 200px;
+}
+
+.search-area .search-select {
+  padding: 6px 8px;
+  border: none;
+  border-left: 1px solid #ddd;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  outline: none;
+}
+
+.search-area .search-btn {
+  border: none;
+  background: #0a6eff;
+  color: #fff;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* 보조 링크 (SNS 및 버튼) */
+.extra-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.extra-links .extra-btn {
+  padding: 5px 10px;
+  border: 1px solid #0a6eff;
+  color: #0a6eff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.extra-links .sns-icon {
+  height: 24px; /* SNS 아이콘 크기 */
+  vertical-align: middle;
+}
+
+.extra-links .festival-link {
+  background: #9c27b0; /* 보라색 계열 */
+  color: #fff;
+  padding: 6px 12px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* 2단: Navigation Bar */
+.header-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0057b8; /* 파란색 배경 */
+  padding: 0 40px;
+  color: #fff;
+}
+
+/* 메인 메뉴 */
+.nav .main-menu {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav .main-menu li a {
+  display: block;
+  padding: 14px 20px;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.nav .main-menu li a:hover {
+  background: #003f8a;
+}
+
+.nav .main-menu .menu-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  padding: 14px 10px;
+  cursor: pointer;
+}

@@ -1,0 +1,119 @@
+/* ---------------------------------- */
+/* 푸터 섹션 스타일 */
+/* ---------------------------------- */
+.footer {
+  background: #222;
+  color: #fff;
+  font-size: 14px;
+  padding: 0 40px 20px;
+  position: relative;
+}
+
+/* 푸터 상단 메뉴/정보 */
+.footer-top-menu {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 10px 0;
+  border-bottom: 1px solid #333;
+  margin-bottom: 15px;
+}
+
+.footer-top-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  padding: 5px 0;
+  transition: color 0.3s;
+}
+
+.footer-top-menu a:hover {
+  color: #0a6eff;
+}
+
+/* 드롭다운 영역 */
+.footer-dropdowns {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.footer-dropdowns select {
+  padding: 8px 12px;
+  background: #333;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* 푸터 정보 영역 */
+.footer-info-area {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.footer-info-area .links {
+  margin-bottom: 15px;
+}
+
+.footer-info-area .links a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+.footer-info-area .links a:after {
+  content: "|";
+  margin-left: 15px;
+  font-weight: normal;
+  color: #555;
+}
+
+.footer-info-area .links a:last-child:after {
+  content: none;
+}
+
+.address,
+.working-hours {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.certifications {
+  position: absolute;
+  right: 40px;
+  bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+.certifications img {
+  height: 40px;
+}
+
+/* TOP 버튼 */
+.top-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #555;
+  color: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 100;
+}
