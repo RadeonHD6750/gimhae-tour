@@ -1,0 +1,310 @@
+/* ---------------------------------- */
+/* food.css: 음식 상세 목록 페이지 스타일 */
+/* ---------------------------------- */
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 40px;
+}
+
+/* 1. 페이지 배너 */
+.page-banner {
+  background: url("images/food-page-bg.jpg") center/cover no-repeat; /* 배경 이미지 경로 설정 필요 */
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+.page-banner .page-title {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+/* 2. Breadcrumb */
+.breadcrumb {
+  font-size: 13px;
+  color: #666;
+  padding: 10px 0;
+}
+.breadcrumb a {
+  color: #666;
+  text-decoration: none;
+}
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* 3. 메인 목록 영역 */
+.food-list-section h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* SNS 공유 버튼 */
+.sns-share {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.sns-share .sns-icon-btn {
+  background: #f0f0f0;
+  border: 1px solid #ddd;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.sns-share .sns-icon-btn img {
+  height: 18px;
+  vertical-align: middle;
+}
+
+/* 목록 컨트롤 (총 건수, 검색) */
+.list-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-top: 2px solid #333;
+  border-bottom: 1px solid #ddd;
+}
+
+.list-controls .count {
+  font-size: 14px;
+  color: #666;
+}
+
+.list-controls .sort-area {
+  display: flex;
+  gap: 5px;
+}
+
+.list-controls .sort-area select,
+.list-controls .sort-area input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.list-controls .search-list-btn {
+  background: #0a6eff;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* 필터 옵션 (추천순, 가나다순) */
+.filter-options {
+  text-align: right;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+.filter-options span.active {
+  color: #0a6eff;
+  font-weight: bold;
+}
+
+/* 4. 음식점 개별 아이템 */
+.food-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.food-item .item-number {
+  background: #0a6eff;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+.food-item .item-number.red-bg {
+  background: #e91e63; /* 이미지의 붉은색 마크 */
+}
+
+.food-item .item-thumbnail {
+  width: 150px;
+  height: 150px;
+  flex-shrink: 0;
+  margin-right: 20px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.food-item .item-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.food-item .item-details {
+  flex-grow: 1;
+}
+
+.food-item .item-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.food-item .item-info {
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.8;
+}
+
+.food-item .item-info .label {
+  font-weight: bold;
+  color: #333;
+  margin-right: 5px;
+}
+
+/* 평점/액션 버튼 영역 */
+.item-ratings {
+  text-align: center;
+  width: 150px;
+  flex-shrink: 0;
+}
+
+.item-ratings .rating-title {
+  font-size: 13px;
+  color: #666;
+}
+
+.item-ratings .stars {
+  font-size: 20px;
+  color: #ffc107; /* 별 색상 (노란색) */
+  letter-spacing: 2px;
+}
+
+.item-ratings .score {
+  font-size: 32px;
+  font-weight: 300;
+  color: #333;
+  margin: 5px 0 15px;
+}
+
+.item-ratings .action-btn {
+  display: block;
+  width: 100px;
+  margin: 5px auto;
+  padding: 8px 0;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.item-ratings .action-btn.blue {
+  background: #0a6eff;
+  color: #fff;
+  border-color: #0a6eff;
+}
+
+/* 5. 지도 섹션 */
+.map-section {
+  margin-top: 40px;
+  padding: 20px 0;
+}
+
+.map-placeholder {
+  height: 400px;
+  background: #e0e0e0;
+  border: 1px solid #ccc;
+  position: relative;
+  /* 실제 지도 이미지 스타일링을 위한 임시 placeholder */
+  background: url("images/map-preview.png") center/cover no-repeat; /* 지도 이미지 경로 설정 필요 */
+}
+
+.map-controls {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.map-controls button {
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border: 1px solid #ccc;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.map-pins {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.map-pins .pin {
+  position: absolute;
+  background: #0a6eff;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  /* 이미지에서 보이는 대략적인 위치 지정 */
+}
+.map-pins .pin:nth-child(1) {
+  top: 150px;
+  left: 600px;
+} /* 7번 핀 */
+.map-pins .pin:nth-child(2) {
+  top: 180px;
+  left: 580px;
+} /* 8번 핀 */
+
+/* 6. 페이지네이션 (하단 숫자) */
+.list-pagination {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.list-pagination a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 5px;
+  border-radius: 4px;
+}
+
+.list-pagination a.active {
+  background: #0a6eff;
+}
