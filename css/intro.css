@@ -1,5 +1,5 @@
 /* ---------------------------------- */
-/* intro.css: 김해에반해 인트로 페이지 스타일 */
+/* intro.css: 김해에반해 인트로 페이지 스타일 (20251015_092654.jpg 기반) */
 /* ---------------------------------- */
 
 .content-wrapper {
@@ -10,8 +10,10 @@
 
 /* 1. 페이지 배너 */
 .page-banner.intro-banner {
-  background: #004d9a; /* 이미지 대신 단색 배경 */
-  height: 150px;
+  /* 이미지: 20251015_092654.jpg에 보이는 배경 이미지 사용 */
+  background: url("images/gimhae-city-banner.jpg") center/cover no-repeat; /* 배경 이미지 경로로 변경 필요 */
+  position: relative;
+  height: 200px; /* 높이 조정 */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,20 +21,38 @@
   margin-bottom: 20px;
 }
 
+/* 배경 이미지 위에 어둡게 오버레이하여 텍스트 가독성 확보 */
+.page-banner.intro-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
 .page-banner .page-title {
-  font-size: 32px;
-  font-weight: bold;
+  font-size: 36px;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
 }
 
 /* 2. Breadcrumb */
 .breadcrumb {
-  font-size: 13px;
+  font-size: 14px;
   color: #666;
   padding: 10px 0;
+  border-bottom: 1px solid #ddd; /* 이미지에 있는 하단 줄 추가 */
 }
 .breadcrumb a {
   color: #666;
   text-decoration: none;
+}
+.breadcrumb a:first-child {
+  /* 홈 아이콘 스타일링 */
+  font-size: 16px;
 }
 
 /* 3. 레이아웃 (사이드바 + 콘텐츠) */
@@ -42,15 +62,15 @@
   margin-top: 20px;
 }
 
-/* 4. 좌측 사이드바 (Sidebar) */
+/* 4. 좌측 사이드바 (Sidebar) - 메뉴 스타일 변경 */
 .sidebar {
-  width: 220px;
+  width: 200px;
   flex-shrink: 0;
 }
 
 .sub-menu {
   border: 1px solid #ddd;
-  margin-bottom: 30px;
+  border-top: 3px solid #0a6eff; /* 상단 파란색 강조선 */
 }
 
 .sub-menu ul {
@@ -61,46 +81,22 @@
 
 .sub-menu li a {
   display: block;
-  padding: 12px 15px;
+  padding: 15px 15px;
   font-size: 15px;
   color: #333;
   text-decoration: none;
   border-bottom: 1px solid #eee;
+  transition: background 0.2s, color 0.2s;
 }
 
 .sub-menu li.active a {
-  background: #0a6eff;
-  color: #fff;
+  background: #f0f8ff; /* 연한 파란색 배경 */
+  color: #0a6eff;
   font-weight: bold;
 }
 
-.sub-menu li:last-child a {
-  border-bottom: none;
-}
-
-.related-links {
-  padding: 15px;
-  background: #f8f8f8;
-  border-radius: 4px;
-  border: 1px solid #eee;
-}
-.related-links h3 {
-  font-size: 16px;
-  color: #0a6eff;
-  margin-bottom: 10px;
-  border-bottom: 2px solid #0a6eff;
-  padding-bottom: 5px;
-}
-.related-links a {
-  display: block;
-  font-size: 14px;
-  color: #555;
-  text-decoration: none;
-  padding: 5px 0;
-}
-.related-links a:hover {
-  color: #333;
-  text-decoration: underline;
+.sub-menu li a:hover:not(.active a) {
+  background: #f9f9f9;
 }
 
 /* 5. 우측 콘텐츠 (Intro Content) */
@@ -109,77 +105,201 @@
 }
 
 .intro-content .content-title {
-  font-size: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 28px;
   font-weight: bold;
-  border-bottom: 3px solid #0a6eff;
   padding-bottom: 10px;
   margin-bottom: 30px;
-}
-
-/* 포털 소개 텍스트 */
-.intro-text p {
-  line-height: 1.8;
-  margin-bottom: 20px;
-  font-size: 15px;
-  color: #444;
-}
-
-/* 포털 구성 정보 박스 */
-.portal-info-box {
-  margin: 40px 0;
-  padding: 30px;
-  border: 1px solid #0a6eff;
-  border-radius: 8px;
-  background: #f4f8ff; /* 파란색 계열 연한 배경 */
-}
-
-.portal-info-box .box-title {
-  font-size: 20px;
-  font-weight: bold;
-  color: #0a6eff;
-  text-align: center;
-  margin-bottom: 25px;
-}
-
-.info-details {
-  display: flex;
-  justify-content: space-around;
-  gap: 15px;
-  text-align: center;
-}
-
-.detail-item {
-  width: 150px;
-}
-
-.detail-item .icon-circle {
-  background: #0a6eff;
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
-  margin: 0 auto 10px;
-  border-radius: 50%;
-  font-size: 28px;
-  color: #fff;
-}
-
-.detail-item p {
-  font-weight: 500;
   color: #222;
 }
 
-/* 문의 정보 */
-.contact-info {
-  border-top: 1px solid #ddd;
-  padding-top: 20px;
-  margin-top: 30px;
+/* SNS 공유 버튼 */
+.sns-share {
+  display: flex;
+  gap: 5px;
 }
-.contact-info h3 {
-  font-size: 18px;
+.sns-btn {
+  display: block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.sns-btn.blog {
+  background: #5f8e00;
+}
+.sns-btn.facebook {
+  background: #3b5998;
+}
+.sns-btn.twitter {
+  background: #55acee;
+}
+.sns-btn.talk {
+  background: #ffc300;
+  font-size: 10px;
+}
+.sns-btn.pdf {
+  background: #c63632;
+}
+.sns-btn.print {
+  background: #777;
+  font-size: 20px;
+}
+
+/* 본문 섹션 블록 */
+.section-block {
+  margin-bottom: 40px;
+}
+
+.block-title {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 700;
   color: #333;
+  margin-bottom: 20px;
+}
+
+.icon-blue-box {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #0a6eff; /* 파란색 박스 */
+  border-radius: 2px;
+  margin-right: 10px;
+  transform: translateY(-2px);
+}
+
+.styled-list {
+  list-style: none;
+  padding-left: 15px;
+}
+
+.styled-list li {
+  font-size: 15px;
+  line-height: 1.8;
+  position: relative;
+  margin-bottom: 8px;
+}
+.styled-list li::before {
+  content: "•"; /* 불릿 문자 */
+  color: #0a6eff;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+/* 관광브랜드 개발 섹션 스타일 */
+.section-subtitle {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0a6eff;
+  margin: 30px 0 15px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+}
+
+/* Core Value */
+.core-value-container {
+  padding: 20px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 8px;
+}
+.value-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.value-item {
+  width: 25%;
+  max-width: 150px;
+}
+.value-item .circle {
+  background: #003f8a; /* 짙은 파란색 계열 */
+  color: #fff;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 auto 15px;
+}
+.value-item .desc {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.plus-sign {
+  font-size: 30px;
+  color: #0a6eff;
+  font-weight: bold;
+}
+
+/* Brand Details (Concept, Naming, Image) */
+.brand-details {
+  margin-top: 40px;
+}
+.detail-row {
+  display: flex;
+  align-items: flex-start;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+.detail-row:first-child {
+  border-top: 1px solid #eee;
+}
+
+.detail-row .section-subtitle {
+  flex-basis: 150px;
+  flex-shrink: 0;
+  border-bottom: none; /* 상위 .section-subtitle 스타일 무시 */
+  margin: 0;
+  padding-bottom: 0;
+  color: #333; /* 검정색으로 변경 */
+}
+.detail-text {
+  flex-grow: 1;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  padding-top: 5px; /* 시각적 정렬 */
+}
+
+.detail-text.naming {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0a6eff;
+}
+
+.detail-row.image-row {
+  align-items: stretch;
+}
+.detail-image {
+  text-align: center;
+  padding: 10px 0;
+}
+.detail-image p {
+  font-size: 15px;
+  font-weight: 500;
   margin-bottom: 10px;
 }
-.contact-info p {
-  font-size: 14px;
-  line-height: 1.7;
+.detail-image img {
+  max-width: 200px; /* 로고 이미지 크기 조정 */
+  height: auto;
 }

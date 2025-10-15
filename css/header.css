@@ -1,21 +1,132 @@
-/* 기본 스타일 */
-body {
-  margin: 0;
-  font-family: "Noto Sans KR", sans-serif;
-  color: #222;
-}
-
+/* ---------------------------------- */
+/* header */
+/* ---------------------------------- */
 .header {
-  border-bottom: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+/* ---------------------------------- */
+/* 최상단 패밀리 사이트 바 스타일 추가 */
+/* ---------------------------------- */
+
+.header-family-wrap {
+  /* 이미지에 보이는 파란색/남색 계열로 변경 */
+  background: #2a2f42;
+  /* 높이와 정렬은 현재 상태를 유지합니다. */
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white; /* 기본 글자색 흰색으로 설정 */
 }
 
-/* 1단: Top Bar */
+.header-family {
+  /* flex 컨테이너가 되어야 리스트가 왼쪽 정렬 가능 */
+  display: flex;
+  justify-content: flex-start; /* 리스트를 왼쪽으로 밀착 정렬 */
+  max-width: 1200px;
+  margin: 0 auto;
+  /* height: 100%; */ /* .header-family-wrap이 높이를 잡아주므로 불필요 */
+  padding: 0 40px; /* 좌우 패딩만 유지 */
+  width: 100%; /* max-width 안에서 꽉 채움 */
+}
+
+.header-family .family-site-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px; /* 글자 크기 조금 키움 */
+  gap: 0; /* 항목 간 간격은 <li> 자체에 패딩으로 넣습니다. */
+  align-items: center;
+}
+
+/* <li> 항목 자체에 패딩을 넣어 클릭 영역 확장 및 간격 확보 */
+.header-family .family-site-list li {
+  width: 80px;
+  height: 50px;
+  line-height: 50px; /* 텍스트 수직 가운데 정렬 */
+  position: relative;
+  /* 현재 활성화된 항목이 아니면 hover 시 약간의 어두운 배경을 줄 수 있음 */
+  transition: background 0.2s;
+  text-align: center;
+}
+
+.header-family .family-site-list li:hover {
+  background-color: black;
+}
+
+.header-family .family-site-list li:hover:not(.active-link) {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.header-family .family-site-list li a {
+  color: white; /* 기본 글자색 흰색 */
+  text-decoration: none;
+  padding: 0;
+  display: block;
+  /* li가 높이를 가지므로 a 태그에는 별도 높이를 주지 않아도 됨 */
+}
+
+/* 현재 포털(관광포털) 강조 - <li>에 배경색 및 폰트 강조 */
+.header-family .family-site-list li.active-link {
+  background-color: #ba2129; /* 더 진한 파란색 배경 */
+  font-weight: bold;
+}
+
+.header-family .family-site-list li.active-link a {
+  color: white; /* 활성화된 글자색도 흰색으로 명시 */
+}
+
+/* 포털 그룹과 안내/홈 그룹 분리: <li> 구조에서는 separator 대신
+   마지막 '국가상징'과 '홈' 사이에 구분선을 넣는 것이 일반적입니다. */
+/* 현재 HTML에 있는 separator 스타일 유지 */
+.header-family .family-site-list .separator {
+  color: rgba(255, 255, 255, 0.5); /* 흰색 구분선 */
+  font-size: 14px;
+  margin: 0 5px;
+  padding: 0; /* li 패딩 영향 제거 */
+  height: auto;
+  line-height: normal;
+}
+
+/* ---------------------------------- */
+/* 로고 검색란 */
+/* ---------------------------------- */
+/* 실제 내용물에 가운데 정렬 적용 */
 .header-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 40px;
+  /* 가운데 정렬 및 최대 너비 설정 */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 2단: Navigation Bar (배경색을 꽉 채우는 래퍼) */
+.header-bottom-wrap {
+  background: #0057b8; /* 파란색 배경 */
+  color: #fff;
+}
+/* 실제 내용물에 가운데 정렬 적용 */
+.header-bottom {
+  width: 100%;
+  background: #0057b8;
+  margin-top: 10px;
+}
+
+.header-center {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 40px;
-  background: #fff;
+  padding: 0 40px;
+  /* 가운데 정렬 및 최대 너비 설정 */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* 로고 영역 */
@@ -100,16 +211,6 @@ body {
   border-radius: 4px;
   font-weight: bold;
   font-size: 14px;
-}
-
-/* 2단: Navigation Bar */
-.header-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #0057b8; /* 파란색 배경 */
-  padding: 0 40px;
-  color: #fff;
 }
 
 /* 메인 메뉴 */
