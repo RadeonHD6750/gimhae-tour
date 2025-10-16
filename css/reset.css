@@ -18,6 +18,12 @@ a:active {
   outline-color: red;
 }
 
+button:active {
+  outline-width: 2px;
+  outline-style: dashed;
+  outline-color: red;
+}
+
 /* 기본 스타일 */
 body {
   margin: 0;
