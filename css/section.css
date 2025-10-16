@@ -60,6 +60,12 @@
   color: #222;
 }
 
+.taste-card:active {
+  outline-width: 2px;
+  outline-style: dashed;
+  outline-color: red;
+}
+
 .taste-card img {
   width: 100%;
   height: 50%;
@@ -113,6 +119,12 @@
 .spot-card {
   width: 400px;
   text-align: left;
+}
+
+.spot-card:active {
+  outline-width: 2px;
+  outline-style: dashed;
+  outline-color: red;
 }
 
 .spot-image-container {
