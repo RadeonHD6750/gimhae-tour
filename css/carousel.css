@@ -1,0 +1,59 @@
+/*단순 하단*/
+.carousel-controls-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.carousel-controls {
+  margin-top: 15px;
+  color: white;
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.prev-arrow {
+  left: -15px; /* 컨테이너 밖으로 살짝 빼기 */
+}
+
+.next-arrow {
+  right: -15px; /* 컨테이너 밖으로 살짝 빼기 */
+}
+
+.black-arrow {
+  color: black;
+}
+
+.carousel-controls span {
+  cursor: pointer;
+  margin: 0 5px;
+}
+.carousel-controls .play-pause {
+  font-size: 12px;
+  margin-right: 15px;
+  vertical-align: middle;
+}
+.carousel-controls .prev-arrow,
+.carousel-controls .next-arrow {
+  font-weight: bold;
+}
+
+/*슬라이드 영역 위에서 컨트롤*/
+.carousel-controls-hover {
+  width: 1250px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  margin: 0 auto;
+}
+
+.carousel-controls-btn {
+  border: none;
+  outline: none;
+  background-color: inherit;
+  cursor: pointer;
+}

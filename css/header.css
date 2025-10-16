@@ -140,7 +140,7 @@
 }
 
 .logo-area img {
-  height: 32px; /* 로고 이미지 크기 */
+  height: 90px; /* 로고 이미지 크기 */
 }
 
 .logo-area .portal-text {
@@ -149,11 +149,15 @@
 }
 
 /* 검색 영역 */
+
+.search-group {
+  display: flex;
+}
+
 .search-area {
   display: flex;
   align-items: center;
   border: 2px solid #0a6eff; /* 파란색 테두리 */
-  border-radius: 4px;
   overflow: hidden;
 }
 
@@ -199,7 +203,7 @@
 }
 
 .extra-links .sns-icon {
-  height: 24px; /* SNS 아이콘 크기 */
+  height: 40px; /* SNS 아이콘 크기 */
   vertical-align: middle;
 }
 

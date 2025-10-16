@@ -12,7 +12,7 @@
 /* 푸터 상단 메뉴/정보 */
 .footer-top-menu {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 20px;
   padding: 10px 0;
   border-bottom: 1px solid #333;
@@ -34,7 +34,7 @@
 /* 드롭다운 영역 */
 .footer-dropdowns {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 10px;
   margin-bottom: 20px;
 }

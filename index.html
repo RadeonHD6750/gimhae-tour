@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>김해에반해 관광포털</title>
     <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/carousel.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/main-banner.css" />
     <link rel="stylesheet" href="css/section.css" />
@@ -39,33 +40,56 @@
       <div class="header-top">
         <div class="logo-area">
           <a href="index.html">
-            <img src="images/logo.png" alt="김해에반해 로고" />
-            <span class="portal-text">관광포털</span>
+            <img src="images/logo@2x_2025.png" alt="김해에반해 로고" />
           </a>
         </div>
 
-        <div class="search-area">
-          <input type="text" placeholder="통합검색" />
-          <select class="search-select">
-            <option>전체</option>
-            <option>여행지</option>
-            <option>음식</option>
-          </select>
-          <button class="search-btn">🔍</button>
+        <div class="search-group">
+          <div class="search-area">
+            <select class="search-select">
+              <option>통합검색</option>
+              <option>여행지</option>
+              <option>음식</option>
+            </select>
+            <input type="text" placeholder="검색어" />
+            <button class="search-btn">🔍</button>
+          </div>
+          <div>
+            <select>
+              <option>여행자맞춤검색</option>
+            </select>
+          </div>
         </div>
 
         <div class="extra-links">
-          <a href="#" class="extra-btn">여행자등록</a>
-          <a href="#"
-            ><img src="images/naver.png" alt="네이버" class="sns-icon"
+          <a href="https://blog.naver.com/ghhamohamo"
+            ><img src="images/bn1blog01@3x.png" alt="네이버" class="sns-icon"
           /></a>
-          <a href="#"
-            ><img src="images/insta.png" alt="인스타그램" class="sns-icon"
+          <a href="https://www.facebook.com/romanticgimhae/"
+            ><img
+              src="images/bn1facebook@3x.png"
+              alt="페이스북"
+              class="sns-icon"
           /></a>
-          <a href="#"
-            ><img src="images/youtube.png" alt="유튜브" class="sns-icon"
+          <a href="https://story.kakao.com/ch/gimhae"
+            ><img
+              src="images/bn1kakaostory@3x.png"
+              alt="카카오스토리"
+              class="sns-icon"
           /></a>
-          <a href="#" class="festival-link">🎉 장영실축제 참가!</a>
+          <a href="https://festa.gyeongnam.go.kr/"
+            ><img
+              src="images/snslink2instagram.png"
+              alt="인스타그램"
+              class="sns-icon"
+          /></a>
+          <a href="https://festa.gyeongnam.go.kr/index.do?siteCd=001"
+            ><img
+              src="images/festival_02.png"
+              alt="축제"
+              class="sns-icon"
+              style="height: 80px"
+          /></a>
         </div>
       </div>
 
@@ -96,48 +120,35 @@
     <main>
       <!-- 메인 비주얼 (자동슬라이드 케러젤) -->
       <section class="main-visual">
-        <div class="visual-bg">
-          <img src="images/main-banner.jpg" alt="김해천문대 야경" />
-          <div class="overlay"></div>
-        </div>
-
         <div class="main-content-wrap">
-          <h1 class="main-title">
-            <span class="logo-on-visual"
-              ><img src="images/logo-on-visual.png" alt="김해에반해"
-            /></span>
-            별 볼일 있는 놀이터 김해<br />
-            여행 가볼까?
-          </h1>
-
+          <section class="visual-bg">
+            <img
+              src="images/v20250103_01.jpg"
+              alt="김해 관광 대표 이미지"
+              width="1920"
+              height="720"
+            />
+          </section>
           <div class="course-carousel-area">
-            <span class="course-title">가야왕도 테마여행 코스</span>
             <div class="course-cards-wrapper">
-              <div class="course-card active">
-                <img src="images/course1.jpg" alt="코스 1 이미지" />
-                <p>수로왕릉</p>
-              </div>
               <div class="course-card">
-                <img src="images/course2.jpg" alt="코스 2 이미지" />
+                <img src="images/v20250103_01.jpg" alt="코스 1 이미지" />
                 <p>김해수로왕릉</p>
               </div>
               <div class="course-card">
-                <img src="images/course3.jpg" alt="코스 3 이미지" />
-                <p>가야테마파크</p>
+                <img src="images/v20250103_02.jpg" alt="코스 2 이미지" />
+                <p>김해천문대</p>
               </div>
               <div class="course-card">
-                <img src="images/course4.jpg" alt="코스 4 이미지" />
-                <p>클레이아크</p>
-              </div>
-              <div class="course-card">
-                <img src="images/course5.jpg" alt="코스 5 이미지" />
-                <p>연지공원</p>
+                <img src="images/v20250103_03.jpg" alt="코스 3 이미지" />
+                <p>대성동 고분군</p>
               </div>
             </div>
-            <div class="carousel-controls">
-              <span class="play-pause">◼︎</span>
-              <span class="prev-arrow">〈</span>
-              <span class="next-arrow">〉</span>
+            <div class="carousel-controls-container">
+              <div class="carousel-controls">
+                <span class="prev-arrow">〈</span>
+                <span class="next-arrow">〉</span>
+              </div>
             </div>
           </div>
         </div>
@@ -146,50 +157,52 @@
       <section class="taste-gimhae">
         <h2 class="section-title">김해의 '맛'에 빠지다!</h2>
         <div class="scroll-container">
-          <button class="arrow prev-arrow">〈</button>
           <div class="taste-cards-wrapper">
+            <!--카드-->
             <div class="taste-card">
-              <img src="images/food1.jpg" alt="장유대청계곡 음식촌" />
+              <img src="images/nepal.jpg" alt="뉴리틀인디아" />
               <div class="info">
-                <p class="name">장유대청계곡 음식촌</p>
-                <p class="desc">
-                  여름철 휴양지로 유명한 곳으로 맑은 계곡물에서 즐기는 별미!
-                </p>
+                <p class="name">뉴리틀인디아</p>
+                <p class="desc">이국적 향취를 물씬 풍기는</p>
                 <p class="location">경상남도 김해시 장유1동</p>
               </div>
             </div>
+            <!--카드-->
             <div class="taste-card">
-              <img src="images/food2.jpg" alt="명동갯장어회 음식촌" />
+              <img src="images/nepal.jpg" alt="뉴리틀인디아" />
               <div class="info">
-                <p class="name">명동갯장어회 음식촌</p>
-                <p class="desc">
-                  부산 신항 인근 명동에 위치한 갯장어회로 유명한 곳이며 ...
-                </p>
+                <p class="name">뉴리틀인디아</p>
+                <p class="desc">이국적 향취를 물씬 풍기는</p>
                 <p class="location">경상남도 김해시 장유1동</p>
               </div>
             </div>
+            <!--카드-->
             <div class="taste-card">
-              <img src="images/food3.jpg" alt="동상시장칼국수/수제비" />
+              <img src="images/nepal.jpg" alt="뉴리틀인디아" />
               <div class="info">
-                <p class="name">동상시장칼국수/수제비</p>
-                <p class="desc">
-                  칼국수 맛집! 김해 동상시장 안에 위치하여 저렴하고 ...
-                </p>
-                <p class="location">경상남도 김해시 동상시장</p>
+                <p class="name">뉴리틀인디아</p>
+                <p class="desc">이국적 향취를 물씬 풍기는</p>
+                <p class="location">경상남도 김해시 장유1동</p>
               </div>
             </div>
+            <!--카드-->
             <div class="taste-card">
-              <img src="images/food4.jpg" alt="서상시장 상국수" />
+              <img src="images/nepal.jpg" alt="뉴리틀인디아" />
               <div class="info">
-                <p class="name">서상시장 상국수</p>
-                <p class="desc">
-                  50년 전통의 김해, 서상시장에서 5일마다 열리는 ...
-                </p>
-                <p class="location">경상남도 김해시 서상시장</p>
+                <p class="name">뉴리틀인디아</p>
+                <p class="desc">이국적 향취를 물씬 풍기는</p>
+                <p class="location">경상남도 김해시 장유1동</p>
               </div>
             </div>
           </div>
-          <button class="arrow next-arrow">〉</button>
+          <div class="carousel-controls-hover">
+            <button class="carousel-controls-btn">
+              <img src="images/prev-btn.png" />
+            </button>
+            <button class="carousel-controls-btn">
+              <img src="images/next-btn.png" />
+            </button>
+          </div>
         </div>
       </section>
 
@@ -198,35 +211,34 @@
         <div class="spot-cards">
           <div class="spot-card">
             <div class="spot-image-container">
-              <img src="images/healing1.jpg" alt="생림오토캠핑장" />
+              <img src="images/bird.jpg" alt="화포천습지생태공원" />
               <button class="plus-btn">+</button>
             </div>
-            <p class="name">생림오토캠핑장</p>
-            <p class="desc">
-              낙동강변에 위치한 자연과 함께 힐링할 수 있는 캠핑장
-            </p>
+            <p class="name">화포천습지생태공원</p>
+            <p class="desc">김해의 대표적인 생태공원으로 철새도래지</p>
           </div>
           <div class="spot-card">
             <div class="spot-image-container">
-              <img src="images/healing2.jpg" alt="클레이아크 김해미술관" />
+              <img src="images/bird.jpg" alt="화포천습지생태공원" />
               <button class="plus-btn">+</button>
             </div>
-            <p class="name">클레이아크 김해미술관</p>
-            <p class="desc">건축도자와 미술을 융합한 전문 미술관</p>
+            <p class="name">화포천습지생태공원</p>
+            <p class="desc">김해의 대표적인 생태공원으로 철새도래지</p>
           </div>
           <div class="spot-card">
             <div class="spot-image-container">
-              <img src="images/healing3.jpg" alt="화포천습지생태공원" />
+              <img src="images/bird.jpg" alt="화포천습지생태공원" />
               <button class="plus-btn">+</button>
             </div>
             <p class="name">화포천습지생태공원</p>
             <p class="desc">김해의 대표적인 생태공원으로 철새도래지</p>
           </div>
         </div>
-        <div class="pagination">
-          <span class="dot active"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
+        <div class="carousel-controls-container">
+          <div class="carousel-controls">
+            <span class="prev-arrow black-arrow">〈</span>
+            <span class="next-arrow black-arrow">〉</span>
+          </div>
         </div>
       </section>
 
@@ -251,27 +263,30 @@
           </div>
 
           <div class="utility-area">
-            <a href="#" class="utility-item">
+            <a
+              href="https://www.gimhae.go.kr/00558.web?amode=view&idx=575&"
+              class="utility-item"
+            >
               <div class="icon-wrap">
-                <img src="images/info-icon.png" alt="종합관광안내소 아이콘" />
+                <img src="images/menu9p01@2x.png" alt="종합관광안내소 아이콘" />
               </div>
               <p>종합관광안내소</p>
             </a>
-            <a href="#" class="utility-item">
+            <a href="https://www.gimhae.go.kr/00559.web" class="utility-item">
               <div class="icon-wrap">
-                <img src="images/phone-icon.png" alt="전화 아이콘" />
+                <img src="images/menu9p02@2x.png" alt="전화 아이콘" />
               </div>
               <p>1330관광안내전화</p>
             </a>
-            <a href="#" class="utility-item">
+            <a href="https://www.gimhae.go.kr/00567.web" class="utility-item">
               <div class="icon-wrap">
-                <img src="images/map-icon.png" alt="지도 아이콘" />
+                <img src="images/menu9p03@2x.png" alt="지도 아이콘" />
               </div>
               <p>관광안내책자</p>
             </a>
-            <a href="#" class="utility-item">
+            <a href="https://www.gimhae.go.kr/00578.web" class="utility-item">
               <div class="icon-wrap">
-                <img src="images/qna-icon.png" alt="Q&A 아이콘" />
+                <img src="images/menu9p04@2x.png" alt="Q&A 아이콘" />
               </div>
               <p>Q&A</p>
             </a>
@@ -331,8 +346,8 @@
         <p class="copyright">Copyright(C) Gimhae City. All Rights Reserved.</p>
 
         <div class="certifications">
-          <img src="images/certification1.png" alt="인증마크1" />
-          <img src="images/certification2.png" alt="인증마크2" />
+          <img src="images/nextit-logo.png" alt="회사로고1" />
+          <img src="images/nextit-logo.png" alt="회사로고1" />
         </div>
       </div>
       <button class="top-btn">TOP</button>

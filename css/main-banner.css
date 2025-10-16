@@ -4,7 +4,7 @@
 .main-visual {
   position: relative;
   width: 100%;
-  height: 600px; /* 섹션 높이 지정 */
+  height: 720px; /* 섹션 높이 지정 */
   overflow: hidden;
 }
 
@@ -35,7 +35,7 @@
 
 .main-content-wrap {
   position: relative;
-  max-width: 1200px;
+  max-width: 1920px;
   margin: 0 auto;
   height: 100%;
   padding: 40px 20px;
@@ -69,15 +69,18 @@
   position: absolute;
   bottom: 40px;
   left: 50%;
-  transform: translateX(-50%); /* 중앙 정렬 */
-  width: 900px; /* 캐러셀 전체 너비 */
+  transform: translateX(80%); /* 중앙 정렬 */
+  width: 400px; /* 캐러셀 전체 너비 */
   z-index: 20;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.58);
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .course-title {
   display: block;
-  color: #fff;
+  color: white;
   font-size: 16px;
   margin-bottom: 10px;
   font-weight: 500;
@@ -90,7 +93,7 @@
 }
 
 .course-card {
-  width: 180px;
+  width: 100px;
   background: rgba(255, 255, 255, 0.9);
   border-radius: 8px;
   overflow: hidden;
@@ -107,7 +110,7 @@
 
 .course-card img {
   width: 100%;
-  height: 100px;
+  height: 100%;
   object-fit: cover;
   display: block;
 }
@@ -118,117 +121,4 @@
   font-size: 14px;
   font-weight: 500;
   color: #222;
-}
-
-.carousel-controls {
-  margin-top: 15px;
-  color: #fff;
-  font-size: 18px;
-}
-
-.carousel-controls span {
-  cursor: pointer;
-  margin: 0 5px;
-}
-.carousel-controls .play-pause {
-  font-size: 12px;
-  margin-right: 15px;
-  vertical-align: middle;
-}
-.carousel-controls .prev-arrow,
-.carousel-controls .next-arrow {
-  font-weight: bold;
-}
-
-/* ---------------------------------- */
-/* 2. 우측 슬라이드 배너 */
-/* ---------------------------------- */
-.side-slide-area {
-  width: 250px;
-  margin-top: 50px;
-}
-
-.side-slide-area .slide-item {
-  background: rgba(255, 255, 255, 0.9); /* 배경 불투명도 */
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.side-slide-area .slide-content img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.side-slide-area .slide-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 0;
-  gap: 5px;
-  background: rgba(0, 0, 0, 0.5); /* 네비게이션 배경 */
-}
-
-.side-slide-area .slide-nav .dot {
-  width: 8px;
-  height: 8px;
-  background: #fff;
-  border-radius: 50%;
-  cursor: pointer;
-  opacity: 0.5;
-}
-
-.side-slide-area .slide-nav .dot.active {
-  opacity: 1;
-}
-
-.side-slide-area .slide-nav .slide-arrow {
-  color: #fff;
-  font-weight: bold;
-  font-size: 18px;
-  cursor: pointer;
-  margin: 0 5px;
-}
-
-/* 추천 여행지 */
-.recommend {
-  padding: 60px 40px;
-  background: #f9f9f9;
-  text-align: center;
-}
-
-.recommend h2 {
-  font-size: 28px;
-  margin-bottom: 40px;
-  color: #222;
-}
-
-.cards {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.card {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  width: 220px;
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-}
-
-.card img {
-  width: 100%;
-  border-radius: 8px 8px 0 0;
-}
-
-.card p {
-  margin: 10px 0 16px;
-  font-size: 16px;
-  font-weight: 500;
 }
