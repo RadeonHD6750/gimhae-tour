@@ -30,3 +30,10 @@ body {
   font-family: "Noto Sans KR", sans-serif;
   color: #222;
 }
+
+.style-reset-btn {
+  border: none;
+  outline: none;
+  background-color: inherit;
+  cursor: pointer;
+}

@@ -2,68 +2,16 @@
 /* food.css: 음식 상세 목록 페이지 스타일 */
 /* ---------------------------------- */
 
-.content-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px 40px;
-}
-
 /* 1. 페이지 배너 */
-.page-banner {
-  background: url("images/food-page-bg.jpg") center/cover no-repeat; /* 배경 이미지 경로 설정 필요 */
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  margin-bottom: 20px;
+.food-banner {
+  background: url("../images/food-bg.jpg") center/cover no-repeat; /* 배경 이미지 경로 설정 필요 */
 }
-
-.page-banner .page-title {
-  font-size: 36px;
-  font-weight: bold;
-}
-
-/* 2. Breadcrumb */
-.breadcrumb {
-  font-size: 13px;
-  color: #666;
-  padding: 10px 0;
-}
-.breadcrumb a {
-  color: #666;
-  text-decoration: none;
-}
-.breadcrumb a:hover {
-  text-decoration: underline;
-}
-
 /* 3. 메인 목록 영역 */
+
 .food-list-section h2 {
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 10px;
-}
-
-/* SNS 공유 버튼 */
-.sns-share {
-  display: flex;
-  justify-content: flex-end;
-  gap: 5px;
-  margin-bottom: 20px;
-}
-
-.sns-share .sns-icon-btn {
-  background: #f0f0f0;
-  border: 1px solid #ddd;
-  padding: 5px;
-  cursor: pointer;
-  border-radius: 4px;
-}
-.sns-share .sns-icon-btn img {
-  height: 18px;
-  vertical-align: middle;
 }
 
 /* 목록 컨트롤 (총 건수, 검색) */

@@ -6,6 +6,7 @@
     <title>김해에반해 - 음식·숙박·쇼핑</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/content-header.css" />
     <link rel="stylesheet" href="css/food.css" />
     <link rel="stylesheet" href="css/footer.css" />
   </head>
@@ -38,33 +39,56 @@
       <div class="header-top">
         <div class="logo-area">
           <a href="index.html">
-            <img src="images/logo.png" alt="김해에반해 로고" />
-            <span class="portal-text">관광포털</span>
+            <img src="images/logo@2x_2025.png" alt="김해에반해 로고" />
           </a>
         </div>
 
-        <div class="search-area">
-          <input type="text" placeholder="통합검색" />
-          <select class="search-select">
-            <option>전체</option>
-            <option>여행지</option>
-            <option>음식</option>
-          </select>
-          <button class="search-btn">🔍</button>
+        <div class="search-group">
+          <div class="search-area">
+            <select class="search-select">
+              <option>통합검색</option>
+              <option>여행지</option>
+              <option>음식</option>
+            </select>
+            <input type="text" placeholder="검색어" />
+            <button class="search-btn">🔍</button>
+          </div>
+          <div>
+            <select>
+              <option>여행자맞춤검색</option>
+            </select>
+          </div>
         </div>
 
         <div class="extra-links">
-          <a href="#" class="extra-btn">여행자등록</a>
-          <a href="#"
-            ><img src="images/naver.png" alt="네이버" class="sns-icon"
+          <a href="https://blog.naver.com/ghhamohamo"
+            ><img src="images/bn1blog01@3x.png" alt="네이버" class="sns-icon"
           /></a>
-          <a href="#"
-            ><img src="images/insta.png" alt="인스타그램" class="sns-icon"
+          <a href="https://www.facebook.com/romanticgimhae/"
+            ><img
+              src="images/bn1facebook@3x.png"
+              alt="페이스북"
+              class="sns-icon"
           /></a>
-          <a href="#"
-            ><img src="images/youtube.png" alt="유튜브" class="sns-icon"
+          <a href="https://story.kakao.com/ch/gimhae"
+            ><img
+              src="images/bn1kakaostory@3x.png"
+              alt="카카오스토리"
+              class="sns-icon"
           /></a>
-          <a href="#" class="festival-link">🎉 장영실축제 참가!</a>
+          <a href="https://festa.gyeongnam.go.kr/"
+            ><img
+              src="images/snslink2instagram.png"
+              alt="인스타그램"
+              class="sns-icon"
+          /></a>
+          <a href="https://festa.gyeongnam.go.kr/index.do?siteCd=001"
+            ><img
+              src="images/festival_02.png"
+              alt="축제"
+              class="sns-icon"
+              style="height: 80px"
+          /></a>
         </div>
       </div>
 
@@ -93,41 +117,39 @@
     </header>
 
     <main>
-      <div class="page-banner">
-        <h1 class="page-title">음식·숙박·쇼핑</h1>
-      </div>
-
-      <div class="content-wrapper">
-        <div class="breadcrumb">
-          <a href="#">🏠</a> > <a href="#">음식·숙박·쇼핑</a> >
-          <a href="#">김해먹거리</a> > 김해의 맛 골목
+      <div class="content-header">
+        <div class="page-banner food-banner">
+          <h1 class="page-title">음식</h1>
         </div>
+        <div class="content-header-wrapper">
+          <div class="content-title">
+            <div>
+              <h2>김해의 맛 골목</h2>
+            </div>
 
-        <section class="food-list-section">
-          <h2>김해의 맛 골목</h2>
-
-          <div class="sns-share">
-            <button class="sns-icon-btn">
-              <img src="images/sns-b.png" alt="B" />
-            </button>
-            <button class="sns-icon-btn">
-              <img src="images/sns-f.png" alt="F" />
-            </button>
-            <button class="sns-icon-btn">
-              <img src="images/sns-t.png" alt="T" />
-            </button>
-            <button class="sns-icon-btn">
-              <img src="images/sns-k.png" alt="K" />
-            </button>
-            <button class="sns-icon-btn">
-              <img src="images/sns-p.png" alt="P" />
-            </button>
-            <button class="sns-icon-btn">
-              <img src="images/sns-a.png" alt="A" />
-            </button>
-            <button class="sns-icon-btn">
-              <img src="images/sns-s.png" alt="S" />
-            </button>
+            <div class="sns-share">
+              <button class="sns-icon-btn style-reset-btn">
+                <img src="images/bn1blog@2x.png" alt="B" />
+              </button>
+              <button class="sns-icon-btn style-reset-btn">
+                <img src="images/bn1facebook@2x.png" alt="F" />
+              </button>
+              <button class="sns-icon-btn style-reset-btn">
+                <img src="images/bn1twitter@2x.png" alt="T" />
+              </button>
+              <button class="sns-icon-btn style-reset-btn">
+                <img src="images/bn1kakaotalk@2x.png" alt="K" />
+              </button>
+              <button class="sns-icon-btn style-reset-btn">
+                <img src="images/bn1pdf@2x.png" alt="P" />
+              </button>
+              <button class="sns-icon-btn style-reset-btn">
+                <img src="images/bn1link@2x.png" alt="A" />
+              </button>
+              <button class="sns-icon-btn style-reset-btn">
+                <img src="images/bn1print.png" alt="S" />
+              </button>
+            </div>
           </div>
 
           <div class="list-controls">
@@ -140,7 +162,11 @@
               <button class="search-list-btn">🔍</button>
             </div>
           </div>
+        </div>
+      </div>
 
+      <div class="content-wrapper">
+        <section class="food-list-section">
           <div class="filter-options">
             <span class="active">✔ 추천순</span> | <span>가나다순</span> |
             <span>평점순</span>
@@ -292,10 +318,13 @@
           근무시간 외에는 상담되지 않습니다.
         </p>
         <p class="copyright">Copyright(C) Gimhae City. All Rights Reserved.</p>
+        <p class="copyright">
+          https://www.gimhae.go.kr/tour.web 김해시 관광포털 클론코딩 연습
+        </p>
 
         <div class="certifications">
-          <img src="images/certification1.png" alt="인증마크1" />
-          <img src="images/certification2.png" alt="인증마크2" />
+          <img src="images/nextit-logo.png" alt="회사로고1" />
+          <img src="images/nextit-logo.png" alt="회사로고1" />
         </div>
       </div>
       <button class="top-btn">TOP</button>

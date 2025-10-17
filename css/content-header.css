@@ -1,0 +1,49 @@
+/* 1. 페이지 배너 */
+.page-banner {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+.page-banner .page-title {
+  font-size: 36px;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+}
+
+.content-header-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 40px;
+}
+
+.content-header-wrapper > .content-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 40px;
+}
+/* SNS 공유 버튼 */
+.sns-share {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.sns-share .sns-icon-btn {
+  padding: 2px;
+}
+.sns-share .sns-icon-btn img {
+  height: 30px;
+  vertical-align: middle;
+}

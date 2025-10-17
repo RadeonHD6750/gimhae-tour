@@ -2,57 +2,10 @@
 /* intro.css: 김해에반해 인트로 페이지 스타일 (20251015_092654.jpg 기반) */
 /* ---------------------------------- */
 
-.content-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px 40px;
-}
-
 /* 1. 페이지 배너 */
-.page-banner.intro-banner {
+.intro-banner {
   /* 이미지: 20251015_092654.jpg에 보이는 배경 이미지 사용 */
-  background: url("images/gimhae-city-banner.jpg") center/cover no-repeat; /* 배경 이미지 경로로 변경 필요 */
-  position: relative;
-  height: 200px; /* 높이 조정 */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  margin-bottom: 20px;
-}
-
-/* 배경 이미지 위에 어둡게 오버레이하여 텍스트 가독성 확보 */
-.page-banner.intro-banner::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3);
-}
-
-.page-banner .page-title {
-  font-size: 36px;
-  font-weight: 700;
-  position: relative;
-  z-index: 2;
-}
-
-/* 2. Breadcrumb */
-.breadcrumb {
-  font-size: 14px;
-  color: #666;
-  padding: 10px 0;
-  border-bottom: 1px solid #ddd; /* 이미지에 있는 하단 줄 추가 */
-}
-.breadcrumb a {
-  color: #666;
-  text-decoration: none;
-}
-.breadcrumb a:first-child {
-  /* 홈 아이콘 스타일링 */
-  font-size: 16px;
+  background: url("../images/intro-bg.jpg") center/cover no-repeat; /* 배경 이미지 경로로 변경 필요 */
 }
 
 /* 3. 레이아웃 (사이드바 + 콘텐츠) */
